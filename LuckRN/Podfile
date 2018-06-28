@@ -1,0 +1,11 @@
+platform :ios,'9.0'
+target 'LuckRN' do
+pod 'React', :path => './js/node_modules/react-native', :subspecs => [
+'Core',
+'RCTImage',
+'RCTText',
+'RCTWebSocket',
+# Add any other subspecs you want to use in your project
+]
+end
+
