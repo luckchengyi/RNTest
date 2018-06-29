@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //你可拉倒吧
     // Do any additional setup after loading the view, typically from a nib.
     self.props =   @{ @"scores" : @[
                               @{
