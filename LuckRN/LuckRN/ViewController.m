@@ -8,13 +8,17 @@
 
 #import "ViewController.h"
 #import <React/RCTRootView.h>
-@interface ViewController ()
+@interface ViewController ()<RCTBridgeModule>
 
 @property (nonatomic, strong) NSDictionary *props;
 
 @end
 
 @implementation ViewController
+RCT_EXPORT_MODULE()
+RCT_EXPORT_METHOD(print:(NSString *)text){
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,8 +31,7 @@
                                   }
                               ]
                       };
-    
-    
+
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake((self.view.bounds.size.width - 300)/2, 200, 300, 40)];
     [btn setTitle:@"点我进入react native界面" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -42,7 +45,7 @@
     
 #ifdef DEBUG
 //    开发的时候用，需要打开本地服务器
-    jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+    jsCodeLocation = [NSURL URLWithString:@"http://172.19.10.48:8081/index.ios.bundle?platform=ios"];
 #else
     //    发布APP的时候用
     jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"index.ios" withExtension:@"jsbundle"];
