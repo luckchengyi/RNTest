@@ -12,7 +12,8 @@ import {
   View,
   Image,
   TextInput,
-  ScrollView
+  ScrollView,
+  NativeModules
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -52,15 +53,21 @@ export default class App extends Component<Props> {
         super(props);
         this.state = {text: ''};
     }
+    onPress(){
+        alert('你可拉倒吧')
+        let CalendarManager = NativeModules.bridgeModel;
+        CalendarManager.addEvent('Birthday Party', '4 Privet Drive, Surrey');
+    };
   render() {
     let pic = {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
-    return (
+      return (
         <ScrollView>
             <View style={styles.container}>
                 <Image source={pic} style={{width: 193, height: 110}} />
-                <Text style={styles.welcome}>
+                <Text style={styles.welcome} onPress={this.onPress}>
+                    onPress事件
                     Welcome to React Native!
                 </Text>
                 <Text style={styles.instructions}>

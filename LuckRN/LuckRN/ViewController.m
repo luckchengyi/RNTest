@@ -15,9 +15,11 @@
 @end
 
 @implementation ViewController
-RCT_EXPORT_MODULE()
-RCT_EXPORT_METHOD(print:(NSString *)text){
-    [self.navigationController popViewControllerAnimated:YES];
+RCT_EXPORT_MODULE(bridgeModel)
+
+RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
+{
+    NSLog(@"Pretending to create an event %@ at %@", name, location);
 }
 
 - (void)viewDidLoad {
@@ -45,7 +47,7 @@ RCT_EXPORT_METHOD(print:(NSString *)text){
     
 #ifdef DEBUG
 //    开发的时候用，需要打开本地服务器
-    jsCodeLocation = [NSURL URLWithString:@"http://172.19.10.48:8081/index.ios.bundle?platform=ios"];
+    jsCodeLocation = [NSURL URLWithString:@"http://172.19.10.55:8081/index.ios.bundle?platform=ios"];
 #else
     //    发布APP的时候用
     jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"index.ios" withExtension:@"jsbundle"];

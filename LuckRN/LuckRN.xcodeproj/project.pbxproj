@@ -15,6 +15,7 @@
 		2D0F75B820E1D7960031F13D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F75B720E1D7960031F13D /* main.m */; };
 		2D0F75C220E1D7960031F13D /* LuckRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F75C120E1D7960031F13D /* LuckRNTests.m */; };
 		2D0F75CD20E1D7960031F13D /* LuckRNUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F75CC20E1D7960031F13D /* LuckRNUITests.m */; };
+		2D3CFC9A20ECAAB100539578 /* RCTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3CFC9920ECAAB100539578 /* RCTMapManager.m */; };
 		2DB95BD920E2340F00A54858 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB95BD720E2340F00A54858 /* assets */; };
 		2DB95BDA20E2340F00A54858 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 2DB95BD820E2340F00A54858 /* index.ios.jsbundle */; };
 		6CEC9999D3FFBEB57D3B47EF /* libPods-LuckRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F071965112D35C4AD5D1D0 /* libPods-LuckRN.a */; };
@@ -54,6 +55,8 @@
 		2D0F75C820E1D7960031F13D /* LuckRNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuckRNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D0F75CC20E1D7960031F13D /* LuckRNUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuckRNUITests.m; sourceTree = "<group>"; };
 		2D0F75CE20E1D7960031F13D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D3CFC9820ECAAB100539578 /* RCTMapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTMapManager.h; sourceTree = "<group>"; };
+		2D3CFC9920ECAAB100539578 /* RCTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTMapManager.m; sourceTree = "<group>"; };
 		2DB95BD720E2340F00A54858 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		2DB95BD820E2340F00A54858 /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.jsbundle; sourceTree = "<group>"; };
 		6C8080568479C09CA09C6D57 /* Pods-LuckRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuckRN/Pods-LuckRN.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				2D0F75A920E1D7940031F13D /* AppDelegate.m */,
 				2D0F75AB20E1D7940031F13D /* ViewController.h */,
 				2D0F75AC20E1D7940031F13D /* ViewController.m */,
+				2D3CFC9820ECAAB100539578 /* RCTMapManager.h */,
+				2D3CFC9920ECAAB100539578 /* RCTMapManager.m */,
 				2D0F75AE20E1D7940031F13D /* Main.storyboard */,
 				2D0F75B120E1D7960031F13D /* Assets.xcassets */,
 				2D0F75B320E1D7960031F13D /* LaunchScreen.storyboard */,
@@ -316,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3CFC9A20ECAAB100539578 /* RCTMapManager.m in Sources */,
 				2D0F75AD20E1D7940031F13D /* ViewController.m in Sources */,
 				2D0F75B820E1D7960031F13D /* main.m in Sources */,
 				2D0F75AA20E1D7940031F13D /* AppDelegate.m in Sources */,
